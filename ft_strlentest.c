@@ -8,13 +8,9 @@ int main(int argc, const char **argv)
 	i = 1;
 
 	if (argc > 1)
-		while (i < argc)
-		{
-			ft_putstr(argv[i]);
-			i++;
-		}
+			ft_putnbr(ft_strlen(argv[i]));
 	else
 		return (-1);
 
-	return (strlen(argv));
+	return (0);
 }
