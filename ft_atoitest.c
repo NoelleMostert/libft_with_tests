@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include "libft.h"
 
-int main ()
+int main (int ac, char **av)
 {
-   int val;
-   char str[20];
+	int i;
 
-   
-   strcpy(str, "ab123");
-   val = ft_atoi(str);
-   printf("My atoi string value = %s, My atoi int value = %d\n", str, val);
-
-   strcpy(str, "ab123");
-   val = atoi(str);
-   printf("Lib string value = %s, Lib int value = %d\n", str, val);
+	i = 1;
+	
+	if (ac > 1)
+	{
+		while (i < ac)
+		{
+			ft_putnbr(ft_atoi(av[i]));
+			i++;
+		}
+	}
 
    return(0);
 }
